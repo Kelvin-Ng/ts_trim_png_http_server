@@ -8,6 +8,8 @@ There are three versions. The simple version (`ts_trim_png_http_server_simple.js
 
 This is a tool to help you watch TS videos with PNG prepended. This seems very common because some people use this method to upload videos to image storage services.
 
+You found out a way to download a video (e.g., you get the m3u8 file and get the link to the actual video), but after downloading the video, the file is recognized as a PNG image (when opened with media player of web browser). If this is the case, this script is for you.
+
 This is an HTTP server intended to be held and accessed locally. When you access a video through this server, the server will retrieve the video from the actual source, trim the prepended PNG, and send to the client. You can stream videos with this HTTP server.
 
 ## Usage
