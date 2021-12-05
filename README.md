@@ -16,6 +16,14 @@ This is an HTTP server intended to be held and accessed locally. When you access
 
 In this section, we use the simple version as examples. All versions have the same usage except the name of the script.
 
+First, install dependencies:
+
+```
+npm install
+```
+
+Then, run the following command:
+
 ```
 node ts_trim_png_http_server_simple.js /path/to/dir/with/m3u8 <prefix to be prepended to the urls in m3u8>
 ```
