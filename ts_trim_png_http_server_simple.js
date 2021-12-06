@@ -49,7 +49,9 @@ const requestListener = function (req, res) {
     console.log('GET request for ' + req.url);
     console.log(req.headers.range);
 
-    let subreq = https.get(url_prefix + req.url, (subres) => {
+    http_or_https = (url_prefix + req.url).startsWith('http://') ? http : https;
+
+    let subreq = http_or_https.get(url_prefix + req.url, (subres) => {
         req.on('close', () => {
             subreq.destroy();
             console.log('Client closed GET request for ' + req.url);
